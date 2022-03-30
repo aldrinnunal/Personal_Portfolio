@@ -51,7 +51,7 @@ window.addEventListener('scroll',function(){
 
 // TYPING EFFECT
 var i  = 0;
-var speed = 40;
+var speed = 70;
 var txt = "ASPIRING UI/UX ENGINEER";
 TypingEffect();
 
