@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.212);
+}
+
+header .mobilelinks {
+  position: absolute;
+  top: 100px;
+  right: -1000px;
+  text-align: end;
+  width: 40%;
+  background-color: #0f0f0f;
+  padding-right: 2rem;
+  height: 100vh;
+}
+
+header .mobilelinks li {
+  list-style: none;
+  margin-top: 2.2rem;
+}
+
+header .mobilelinks a {
+  font-family: "Poppins",sans-serif;
+  font-size: 1.4rem;
+  color: white;
+}
+
+header .overlay {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: none;
+  z-index: -12;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.774)), to(rgba(0, 0, 0, 0.445)));
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.445));
+  position: fixed;
+  top: 11%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+header .navbar {
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+}
+
+header .navbar__logo {
+  width: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .navbar__logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+header .navbar__toggle span {
+  display: none;
+  height: 3px;
+  width: 30px;
+  background-color: white;
+  margin-top: 5px;
+  -webkit-transform-origin: 9px 2px;
+          transform-origin: 9px 2px;
+}
+
+header .navbar__toggle.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .navbar__toggle.open > span:nth-child(2) {
+  left: 0;
+  opacity: 0;
+  display: none;
+}
+
+header .navbar__toggle.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header .navbar__links a {
+  position: relative;
+  margin-left: 4rem;
+  color: white;
+  font-family: "Poppins",sans-serif;
+}
+
+header .navbar__links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+  bottom: -33px;
+  background-color: #ff8fa2;
+  width: 100%;
+  height: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .navbar__links a:hover::after {
+  height: 5px;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero i {
+  color: white !important;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+  -webkit-animation: arrowDown;
+          animation: arrowDown;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes arrowDown {
+  50% {
+    bottom: 40px;
+  }
+}
+
+@keyframes arrowDown {
+  50% {
+    bottom: 40px;
+  }
+}
+
+.hero__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.822)), to(rgba(0, 0, 0, 0.849))), url(https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.849)), url(https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.hero__content {
+  padding-top: 30vh;
+  text-align: center;
+}
+
+.hero__content h2 {
+  font-weight: 100;
+  font-family: "Poppins",sans-serif;
+  color: #fbfbfb;
+  font-size: 2rem;
+}
+
+.hero__content h1 {
+  font-family: "Poppins",sans-serif;
+  color: #fbfbfb;
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 425px) {
+  header .navbar {
+    width: 100%;
+  }
+  header .navbar__toggle span {
+    display: block;
+  }
+  header .navbar__links {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .navbar {
+    width: 100%;
+  }
+  header .navbar__toggle span {
+    display: block;
+  }
+  header .navbar__links {
+    display: none;
+  }
+  .hero__content {
+    padding-top: 30vh;
+  }
+  .hero__content h2 {
+    font-size: 1.5rem;
+  }
+  .hero__content h1 {
+    font-size: 3.5rem;
+  }
+}
+/*# sourceMappingURL=portoflio.css.map */
