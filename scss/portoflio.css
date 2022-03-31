@@ -275,9 +275,8 @@ header .navbar__links a:hover::after {
 }
 
 .works {
-  border-radius: 25px;
   width: 100%;
-  background-color: black;
+  background-color: #1a1a1a;
   padding-bottom: 5rem;
 }
 
@@ -303,9 +302,15 @@ header .navbar__links a:hover::after {
 }
 
 .works__contents .box {
-  background-color: #1b1b1b;
+  z-index: 200;
+  background-color: black;
   position: relative;
   color: white;
+}
+
+.works__contents .box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .works__contents .box img {
@@ -340,13 +345,15 @@ header .navbar__links a:hover::after {
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .works__contents .box p {
   text-align: center;
   padding: 20px;
   font-family: "Poppins",sans-serif;
-  font-weight: 8;
+  font-weight: 200;
   font-size: 1.3rem;
 }
 

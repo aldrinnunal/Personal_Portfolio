@@ -301,9 +301,9 @@ header
 
 .works
 {
-    border-radius: 25px;
+    
    width: 100%;
-   background-color: black;
+   background-color: rgb(26, 26, 26);
     padding-bottom: 5rem;
    &__title
    {
@@ -329,14 +329,18 @@ header
        
        & .box
        {
-           background-color: rgb(27, 27, 27);
+           z-index: 200;
+           background-color: black;
            position: relative;
            color: white;
+           &:hover
+           {
+            transform: scale(1.05);
+           }
            & img 
            {
             height: 220px;
             display: block;
-        
            }
          
            & a
@@ -362,7 +366,7 @@ header
                    animation: linkRotate;
                    animation-duration: 1.5s;
                    animation-iteration-count: infinite ;
-                  
+                   transform: scale(1);
                    
                }
              
@@ -372,7 +376,7 @@ header
                text-align: center;
                padding: 20px;
                font-family: "Poppins",sans-serif;
-               font-weight: 8--00;
+               font-weight: 200;
                font-size: 1.3rem;
               
            }
