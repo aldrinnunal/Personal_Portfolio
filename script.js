@@ -43,7 +43,7 @@ window.addEventListener('scroll',function(){
         header.style.boxShadow = "none";
     }
     else{
-        header.style.backgroundColor = "rgb(15, 15, 15)";
+        header.style.backgroundColor = "rgb(26, 26, 26)";
         header.style.boxShadow = "0px 4px 3px rgb(15, 15, 15)";
  
     }

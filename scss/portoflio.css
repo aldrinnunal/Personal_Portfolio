@@ -26,8 +26,6 @@ html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 a, a:visited, a:hover {
@@ -36,6 +34,24 @@ a, a:visited, a:hover {
 
 body {
   background-color: #f0f0f0;
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: #F5F5F5;
+}
+
+html::-webkit-scrollbar {
+  width: 14px;
+  background-color: #F5F5F5;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eec0c6), to(#e58c8a));
+  background: linear-gradient(#eec0c6, #e58c8a);
 }
 
 header {
@@ -260,7 +276,7 @@ header .navbar__links a:hover::after {
 .about__title h2 {
   font-size: 2rem;
   text-align: center;
-  text-shadow: 0px 3px #f52e4f;
+  text-shadow: 0px 3px #f3516c;
 }
 
 .about__title p {
@@ -281,7 +297,7 @@ header .navbar__links a:hover::after {
 }
 
 .works__title {
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
   font-family: "Poppins",sans-serif;
   font-weight: 600;
@@ -373,6 +389,106 @@ header .navbar__links a:hover::after {
   50% {
     padding: 70px;
   }
+}
+
+.socials {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 20vh;
+}
+
+.socials__title {
+  font-size: 1.5rem;
+  font-family: "Poppins",sans-serif;
+  text-align: center;
+  font-weight: 200;
+  color: white;
+}
+
+.socials__links {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.socials__links a {
+  color: #F5F5F5;
+  margin-right: 1rem;
+}
+
+.socials__links .la-facebook-f {
+  color: #3b5998;
+  border-radius: 100%;
+  padding: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials__links .la-facebook-f:hover {
+  color: white;
+  background: #3b5998;
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.socials__links .la-instagram {
+  color: #c13584;
+  border-radius: 100%;
+  padding: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials__links .la-instagram:hover {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e1306c), to(#405de6));
+  background: linear-gradient(#e1306c, #405de6);
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.socials__links .la-codepen {
+  color: darkslategray;
+  border-radius: 100%;
+  padding: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials__links .la-codepen:hover {
+  color: white;
+  background-color: darkslategray;
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.socials__links .la-github {
+  color: black;
+  border-radius: 100%;
+  padding: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials__links .la-github:hover {
+  color: white;
+  background-color: black;
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.socials__links .la-linkedin-in {
+  color: #0A66C2;
+  border-radius: 100%;
+  padding: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials__links .la-linkedin-in:hover {
+  color: white;
+  background-color: #0A66C2;
+  border-radius: 100%;
+  padding: 3px;
 }
 
 @media only screen and (max-width: 1440px) {
