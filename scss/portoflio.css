@@ -55,6 +55,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 header {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 100%;
   position: fixed;
   z-index: 1000;
