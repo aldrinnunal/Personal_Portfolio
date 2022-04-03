@@ -8,8 +8,8 @@ window.addEventListener('scroll',function(){
         header.style.boxShadow = "none";
     }
     else{
-        header.style.backgroundColor = "#F5F2E7";
-        header.style.boxShadow = "0px 2px 6px #a2a09b";
- 
+        header.style.backgroundColor = "rgb(12, 12, 12)";
+        header.style.boxShadow = " 0 0 5px black";
+        
     }
 });
