@@ -348,6 +348,11 @@ header
             background-color: white;
             line-height: 1.8;
 
+            & i
+            {
+                color: $blue;
+            }
+
         }  
         & h5
         {
@@ -383,7 +388,7 @@ header
 // Testimony
 .testimony-section
 {
-    background-color: #020101;
+    background-color: rgb(12, 12, 12);
     width: 100%;
     margin: 5rem 0;
     & .testimony
@@ -395,6 +400,7 @@ header
         align-items: center !important;
     &__title
     {
+        width: 80%;
         color: white;
         font-family: $font-roboto-condensed;
 
@@ -417,7 +423,7 @@ header
 // PROGRAMS
 .programs
 {
-    width: 90%;
+    width: 70%;
     height: 50%;
     margin: 8rem auto;
     &__title
@@ -433,9 +439,16 @@ header
     }
     & .owl-carousel
     {
+        & .item
+        {
+            position: relative;
+
+       
+        }
         & img
         {
-           
+            max-height: 250px;
+            display: block;
         }
     }
   
