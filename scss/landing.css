@@ -5,15 +5,21 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  background-color: #ebebeb !important;
 }
 
 html::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #424242;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.864);
+  background-color: white;
 }
 
 html::-webkit-scrollbar {
-  background-color: white;
+  background-color: #e3e3e3;
   width: 14px;
 }
 
@@ -38,7 +44,7 @@ header .navbar {
 
 header .navbar-brand img {
   width: 80px;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 header .navbar button:focus {
@@ -169,12 +175,238 @@ header .navbar ul li:last-child a:hover {
 }
 
 .content {
-  height: 100vh;
+  height: auto;
+  padding: 15vh 0;
 }
 
-@media only screen and (max-width: 769px) {
-  header .navbar-brand {
-    margin-left: 10px;
+.content__title {
+  text-align: center;
+}
+
+.content__title h1 {
+  font-weight: 700;
+}
+
+.content__title p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.content__card {
+  padding-top: 5vh;
+  max-width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content__box {
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.content__box:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.content__box img {
+  height: 500px;
+  display: block;
+  -webkit-clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+          clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+  border: 5px solid #063e66;
+}
+
+.content__box h2 {
+  opacity: 0;
+  -webkit-clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+          clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  margin: 0;
+  font-style: italic;
+  text-shadow: 0px 0px 25px #063e66 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.465);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 200px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.content__box h2 span {
+  font-weight: 100;
+  font-size: 0.5rem;
+}
+
+.content__box h2:hover {
+  opacity: 1;
+}
+
+.plans {
+  width: 50%;
+  margin: auto;
+  padding: 5vh 0;
+}
+
+.plans__title {
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.plans__title h1 {
+  font-weight: 700;
+}
+
+.plans__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.plans .box1 {
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  height: auto;
+  overflow: hidden;
+}
+
+.plans .box1 h3 {
+  margin: 0;
+  background-color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: 800;
+}
+
+.plans .box1 h3 span {
+  font-size: 3rem;
+  color: #1181d2;
+  text-shadow: 0px 4px 1px #3f81b13f;
+}
+
+.plans .box1 p {
+  padding: 1.5rem 1.5rem;
+  margin: 0;
+  background-color: white;
+  line-height: 1.8;
+}
+
+.plans .box1 h5 {
+  padding: 0 1.5rem;
+  margin: 0;
+  background-color: white;
+}
+
+.plans .box1 a {
+  display: block;
+  width: 100%;
+  color: white;
+  background-color: #1181d2;
+  text-align: center;
+  text-decoration: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.plans .box1 a:hover {
+  opacity: 90%;
+}
+
+.testimony-section {
+  background-color: #020101;
+  width: 100%;
+  margin: 5rem 0;
+}
+
+.testimony-section .testimony {
+  padding: 4rem 0px;
+  max-width: 1130px;
+  margin: auto;
+  -ms-flex-line-pack: center !important;
+      align-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.testimony-section .testimony__title {
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.testimony-section .testimony__title a {
+  text-decoration: none;
+}
+
+.testimony-section .testimony__image img {
+  width: 100%;
+}
+
+.programs {
+  width: 90%;
+  height: 50%;
+  margin: 8rem auto;
+}
+
+.programs__title {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.programs__title h1 {
+  font-weight: 700;
+}
+
+.programs .owl-carousel span {
+  width: 30px !important;
+  height: 3px !important;
+  margin: 25px 7px !important;
+  background: silver !important;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  border-radius: 1px !important;
+}
+
+.programs .owl-carousel .active span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #2545d3 !important;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  border-radius: 1px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  header .navbar-brand img {
+    margin-left: 5px !important;
   }
   header .container-fluid {
     padding: 0 !important;
@@ -198,6 +430,129 @@ header .navbar ul li:last-child a:hover {
   }
   header ul li:last-child a {
     padding-right: 1rem;
+  }
+  .content__card {
+    padding-top: 5vh;
+    width: 100% !important;
+    margin: auto !important;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .content__box {
+    margin-top: 1rem;
+    -webkit-clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+            clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+  }
+  .content__box:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    z-index: 5;
+  }
+  .content__box img {
+    height: 350px;
+    width: 100%;
+    -webkit-clip-path: none;
+            clip-path: none;
+    border: none;
+  }
+  .content__box h2 {
+    font-size: 1.4rem;
+    padding-top: 120px;
+  }
+  .plans {
+    width: 80%;
+    margin: auto;
+  }
+  .plans__title {
+    padding-bottom: 2.5rem;
+    text-align: center;
+  }
+  .plans__title h1 {
+    font-weight: 700;
+  }
+  .plans__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: none;
+  }
+  .testimony {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background-color: #020101;
+  }
+  .testimony__title {
+    text-justify: justify;
+    width: 70%;
+    padding-top: 2rem;
+  }
+  .testimony__image {
+    margin: auto;
+  }
+  .testimony__image img {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .content__title h1 {
+    font-size: 1.3rem;
+  }
+  .content__title p {
+    font-size: 1rem;
+  }
+  .content__card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .content__box {
+    margin-bottom: 2rem;
+    -webkit-clip-path: none;
+            clip-path: none;
+    -webkit-box-shadow: 0px 0px 10px rgba(234, 234, 234, 0.089) !important;
+            box-shadow: 0px 0px 10px rgba(234, 234, 234, 0.089) !important;
+  }
+  .content__box:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    z-index: 5;
+    -webkit-box-shadow: 0px 0px 10px black;
+            box-shadow: 0px 0px 10px black;
+  }
+  .content__box img {
+    height: 380px;
+    width: 100%;
+    -webkit-clip-path: none;
+            clip-path: none;
+    border: none;
+  }
+  .content__box h2 {
+    font-size: 1.4rem;
+    padding-top: 120px;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .plans {
+    width: 90%;
+    margin: auto;
+  }
+  .testimony__title {
+    text-justify: justify;
+    width: 80%;
+    padding-top: 2rem;
+  }
+  .testimony__title h1 {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=landing.css.map */

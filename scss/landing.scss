@@ -10,18 +10,24 @@ $blue:#063e66;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+body
+{
+    background-color: rgb(235, 235, 235) !important;
 }
 
 // SCROLLBAR DESIGN
 html::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.864);
    
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(255, 255, 255);
   }
   
   html::-webkit-scrollbar {
    
-    background-color: white; width: 14px;
+    background-color: rgb(227, 227, 227); width: 14px;
   }
   
   html::-webkit-scrollbar-thumb {
@@ -47,7 +53,7 @@ header
             & img
             {
                 width: 80px;
-                margin-left: 2rem;
+                margin-left: 1rem;
             }
         }
         
@@ -206,19 +212,286 @@ header
 
 .content
 {
-    height: 100vh;
+    height: auto;
+    padding: 15vh 0;
+
+    &__title
+    {
+        text-align: center;
+
+        & h1
+        {
+            font-weight: 700;
+          
+        }
+        & p
+        {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    
+    }
+    
+    &__card
+    {
+        padding-top: 5vh;
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+       
+    }
+    &__box
+    {   
+        position: relative;
+        transition: all 0.2s ease-in-out;
+
+        &:hover
+        {
+            transform: scale(1.07);
+        }
+        & img 
+        {
+            height: 500px;
+            display: block;
+            clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+            border: 5px solid $blue;
+            
+         
+        }
+        & h2
+        {
+            opacity: 0;
+            clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            margin: 0;
+            font-style: italic;
+            text-shadow: 0px 0px 25px  $blue !important;
+            display: flex;
+            font-size: 2rem;
+            font-family: $font-roboto;
+            color: white;
+            font-weight: 800;
+            background-color: rgba(0, 0, 0, 0.465);
+            justify-content: center;
+            padding-top: 200px;
+            transition: all 0.2s ease-in-out;
+            & span
+            {
+                font-weight: 100;
+                font-size: 0.5rem;
+            }
+            &:hover
+            {
+                opacity: 1;
+            }
+
+        }
+        
+    }
 }
+
+// PLANS
+.plans
+{
+    width: 50%;
+    margin: auto;
+    padding: 5vh 0;
+    &__title
+    {
+        padding-bottom: 2.5rem;
+        text-align: center;
+        & h1
+        {
+           
+            font-weight: 700;
+        }
+    }
+
+    &__container
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        // justify-content: space-between;
+    }
+    & .box1
+    {
+     
+      border-radius: 10px;
+      font-family: $font-roboto;
+       height: auto;
+       overflow: hidden;
+        & h3
+        {
+            margin: 0;
+            background-color: white;
+            text-align: center;
+            padding: 2rem 0;
+            font-weight: 800;
+            
+            & span
+            {
+                font-size: 3rem;
+                color: #1181d2;
+                text-shadow: 0px 4px 1px #3f81b13f;
+            }
+            
+        }
+        & p
+        {
+            padding: 1.5rem 1.5rem;
+            margin: 0;
+            background-color: white;
+            line-height: 1.8;
+
+        }  
+        & h5
+        {
+            padding: 0 1.5rem;
+            margin: 0;
+            background-color: white;
+       
+        } 
+       & a
+       {
+           display: block;
+           width: 100%;
+           color: white;
+           background-color: #1181d2;
+           text-align: center;
+           text-decoration: none;
+           border-bottom-left-radius: 10px;
+           border-bottom-right-radius: 10px;
+           padding: 15px 0;
+           font-family: $font-roboto;
+           font-weight: 600;
+           font-size: 1.5rem;
+
+           &:hover
+           {
+               opacity: 90%;
+           }
+      
+       }
+    }
+}
+
+// Testimony
+.testimony-section
+{
+    background-color: #020101;
+    width: 100%;
+    margin: 5rem 0;
+    & .testimony
+    {
+        padding: 4rem 0px;
+        max-width: 1130px;
+        margin: auto;
+        align-content: center !important;
+        align-items: center !important;
+    &__title
+    {
+        color: white;
+        font-family: $font-roboto-condensed;
+
+        & a
+        {
+            text-decoration: none;
+        }
+    }
+
+    &__image
+    {
+        & img
+        {
+            width:100%;
+        }
+    }
+    }
+}
+
+// PROGRAMS
+.programs
+{
+    width: 90%;
+    height: 50%;
+    margin: 8rem auto;
+    &__title
+    {
+        
+        margin: 2rem 0;
+        text-align: center;
+
+        & h1 
+        {
+            font-weight: 700;
+        }
+    }
+    & .owl-carousel
+    {
+        & img
+        {
+           
+        }
+    }
+  
+    & .owl-carousel span {
+        width:30px !important;
+        height:3px !important;
+        margin:25px 7px !important;
+        background: rgb(192, 192, 192) !important;
+        display:block;
+        
+        -webkit-backface-visibility:visible;
+        -webkit-transition:opacity 200ms ease;
+        -moz-transition:opacity 200ms ease;
+        -ms-transition:opacity 200ms ease;
+        -o-transition:opacity 200ms ease;
+        transition:opacity 200ms ease;
+        -webkit-border-radius:30px;
+        -moz-border-radius:30px;
+        border-radius:1px !important;
+    
+    }
+    & .owl-carousel .active span {
+        width:10px;
+        height:10px;
+        margin:5px 7px;
+        background: rgb(37, 69, 211) !important;
+        display:block;
+        -webkit-backface-visibility:visible;
+        -webkit-transition:opacity 200ms ease;
+        -moz-transition:opacity 200ms ease;
+        -ms-transition:opacity 200ms ease;
+        -o-transition:opacity 200ms ease;
+        transition:opacity 200ms ease;
+        -webkit-border-radius:30px;
+        -moz-border-radius:30px;
+        border-radius:1px !important;
+    }
+  
+}
+
 
 // MEDIA QUERIES
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
+
+    
     header
     {
         & .navbar
         {
           &-brand
           {
-              margin-left: 10px;
+              & img 
+              {
+                  margin-left: 5px !important;
+              }
           }
         }
         & .container-fluid
@@ -237,10 +510,7 @@ header
                     background-color: rgb(36, 36, 36);
                 }
             }
-            & li a
-            {
-                
-            }
+
             background-color: rgb(12, 12, 12) !important;
             & li:last-child
             {
@@ -260,4 +530,188 @@ header
             }
         }
     }
+
+    // CONTENT
+
+.content
+{
+    
+    &__card
+    {
+        padding-top: 5vh;
+        width: 100% !important;
+        margin:  auto !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+  
+       
+    }
+    &__box
+    {   
+        margin-top: 1rem;
+        clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+        &:hover
+        {
+            transform: scale(1.02);
+            z-index: 5;
+        
+        }
+        
+        
+        & img 
+        {
+           
+            height: 350px;
+            width: 100%;
+            clip-path: none;
+            border:  none;
+        
+            
+         
+        }
+        & h2
+        {
+            font-size: 1.4rem;
+            padding-top: 120px;
+        }
+        
+    }
 }
+   // PLANS
+.plans
+{
+    width: 80%;
+    margin: auto;
+
+    &__title
+    {
+        padding-bottom: 2.5rem;
+        text-align: center;
+        & h1
+        {
+           
+            font-weight: 700;
+        }
+    }
+
+    &__container
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: none;
+        // justify-content: space-between;
+    }
+   
+    
+}
+// Testimony
+.testimony
+{
+    flex-direction: column-reverse;
+    background-color: #020101;
+    &__title
+    {
+   
+        text-justify: justify;
+        width: 70%;
+        padding-top: 2rem;
+    }
+    &__image
+    {
+        margin: auto;
+        & img
+        {
+            width: 80% !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+}
+}
+
+@media only screen and (max-width: 425px) {
+        // CONTENT
+
+.content
+{
+    &__title
+    {
+        & h1 
+        {
+            font-size: 1.3rem;
+        }
+        & p
+        {
+            font-size: 1rem;
+        }
+    }
+    &__card
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+  
+       
+    }
+    &__box
+    {   
+        margin-bottom: 2rem;
+        clip-path:none;
+        box-shadow: 0px 0px 10px rgba(234, 234, 234, 0.089) !important;
+
+        &:hover
+        {
+            transform: scale(1.05);
+            z-index: 5;
+            box-shadow: 0px 0px 10px black;
+        }
+        
+        
+        & img 
+        {
+           
+            height: 380px;
+            width: 100%;
+            clip-path: none;
+            border: none;
+            
+         
+        }
+        & h2
+        {
+            font-size: 1.4rem;
+            padding-top: 120px;
+            clip-path: none;
+        }
+        
+    }
+ }
+
+
+   // PLANS
+.plans
+{
+    width: 90%;
+    margin: auto;
+
+}
+// Testimony
+.testimony
+{
+   
+    &__title
+    {
+   
+        text-justify: justify;
+        width: 80%;
+        padding-top: 2rem;
+        
+        & h1 
+        {
+            font-size: 1.5rem;
+        }
+    }
+  
+}
+}
+ 
