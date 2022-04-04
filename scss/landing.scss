@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 $font-roboto:'Roboto', sans-serif;
+$font-roboto-condensed:'Roboto Condensed', sans-serif;
+$blue:#063e66;
 
 *
 {
@@ -9,6 +12,23 @@ $font-roboto:'Roboto', sans-serif;
     padding: 0;
 }
 
+// SCROLLBAR DESIGN
+html::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   
+    background-color: rgb(66, 66, 66);
+  }
+  
+  html::-webkit-scrollbar {
+   
+    background-color: white; width: 14px;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+   
+    background: linear-gradient(#020101,#1b1a1a);
+  }
 // NAV
 header
 {
@@ -27,6 +47,7 @@ header
             & img
             {
                 width: 80px;
+                margin-left: 2rem;
             }
         }
         
@@ -48,12 +69,19 @@ header
         }
         & .navbar-nav
         {
+            
             & li a 
             {
                 color: white !important;
                 font-family: $font-roboto;
                 font-size: 1.2rem;
                 font-weight: 200;
+                transition: all 0.3s ease-in-out;
+                &:hover
+                {
+                    transform: translate(0rem , 0.09rem);
+               
+                }
             }
         }
         & ul
@@ -62,14 +90,26 @@ header
             
             & li:last-child
             {
-                background-color: #063e66;
-                border-radius: 10px;
+                background-color: $blue;
+                margin-left: 2rem;
                 padding: 0 15px;
+                transition: 0.2s;
+                &:hover
+                {
+                    opacity: 90% !important;
+                }
            
                 & a
 
                 {
                     font-weight: 600;
+                    transform: translate(0rem , 0rem) !important;
+
+                    &:hover
+                    {
+                        opacity: 90% !important;
+                    }
+            
                 }
                 
             }
@@ -90,13 +130,76 @@ header
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.543),rgba(0, 0, 0, 0.564)) ,url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.666),rgba(0, 0, 0, 0.724)) ,url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   
 }
 
 .hero
 {
     height: 100vh;
+    
+    &__contents
+    {
+        padding-top: 30vh;
+        text-align: center;
+        font-family: $font-roboto-condensed;
+        & h1
+        {
+           
+            color:white;
+            font-weight: 600;
+            text-shadow: 0px 0px 6px rgb(195, 195, 195);
+        }
+        & h2
+        {
+            font-weight: 600;
+            color: $blue;
+            font-size: 3rem;
+            text-shadow: 0px 2px 0px rgb(73, 73, 73);
+            & span
+            {
+                color: white;
+                font-size: 4rem;
+                text-shadow: 0px 0px 6px rgb(195, 195, 195);
+            }
+        }
+        & a
+        {
+            padding: 15px 20px 15px 30px;
+            font-size: 1.3rem;
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            line-height: 6;
+            transition: all 0.3s ease-in-out;
+           
+            &:hover
+            {
+                color: white;
+                transition: all 0.3s ease-in-out;
+                box-shadow: inset 0px 0px 3px rgb(255, 255, 255);
+            }
+            & i
+            {
+                transition: all 0.3s ease-in-out;
+                white-space: nowrap;
+                opacity: 0;
+    
+            
+            }
+        }
+        
+        & a:hover i
+        {
+            transition: all 0.3s ease-in-out;
+            color: white;
+            opacity: 1;
+            margin-left: 20px;
+          
+        }   
+
+     
+    }
 }
 
 // CONTENT
@@ -124,11 +227,36 @@ header
         }
         & ul
         {
+            padding: 0 !important;
+            & li
+            {
+                padding-right: 1rem;
+         
+                &:hover
+                {
+                    background-color: rgb(36, 36, 36);
+                }
+            }
+            & li a
+            {
+                
+            }
             background-color: rgb(12, 12, 12) !important;
             & li:last-child
             {
+              
                 background-color: transparent !important;
-                padding: 0 !important;
+             
+                margin-left: 0rem !important;
+                &:hover
+                {
+                    background-color: rgb(36, 36, 36) !important;
+                }
+                & a
+                {
+                    padding-right: 1rem;
+                
+                }
             }
         }
     }

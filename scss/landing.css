@@ -1,9 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #424242;
+}
+
+html::-webkit-scrollbar {
+  background-color: white;
+  width: 14px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020101), to(#1b1a1a));
+  background: linear-gradient(#020101, #1b1a1a);
 }
 
 header {
@@ -21,6 +38,7 @@ header .navbar {
 
 header .navbar-brand img {
   width: 80px;
+  margin-left: 2rem;
 }
 
 header .navbar button:focus {
@@ -38,6 +56,13 @@ header .navbar .navbar-nav li a {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .navbar .navbar-nav li a:hover {
+  -webkit-transform: translate(0rem, 0.09rem);
+          transform: translate(0rem, 0.09rem);
 }
 
 header .navbar ul {
@@ -46,12 +71,24 @@ header .navbar ul {
 
 header .navbar ul li:last-child {
   background-color: #063e66;
-  border-radius: 10px;
+  margin-left: 2rem;
   padding: 0 15px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+header .navbar ul li:last-child:hover {
+  opacity: 90% !important;
 }
 
 header .navbar ul li:last-child a {
   font-weight: 600;
+  -webkit-transform: translate(0rem, 0rem) !important;
+          transform: translate(0rem, 0rem) !important;
+}
+
+header .navbar ul li:last-child a:hover {
+  opacity: 90% !important;
 }
 
 .hero::before {
@@ -64,12 +101,71 @@ header .navbar ul li:last-child a {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.543)), to(rgba(0, 0, 0, 0.564))), url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.543), rgba(0, 0, 0, 0.564)), url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.666)), to(rgba(0, 0, 0, 0.724))), url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.724)), url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
 .hero {
   height: 100vh;
+}
+
+.hero__contents {
+  padding-top: 30vh;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.hero__contents h1 {
+  color: white;
+  font-weight: 600;
+  text-shadow: 0px 0px 6px #c3c3c3;
+}
+
+.hero__contents h2 {
+  font-weight: 600;
+  color: #063e66;
+  font-size: 3rem;
+  text-shadow: 0px 2px 0px #494949;
+}
+
+.hero__contents h2 span {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 0px 0px 6px #c3c3c3;
+}
+
+.hero__contents a {
+  padding: 15px 20px 15px 30px;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  line-height: 6;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero__contents a:hover {
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: inset 0px 0px 3px white;
+          box-shadow: inset 0px 0px 3px white;
+}
+
+.hero__contents a i {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.hero__contents a:hover i {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  opacity: 1;
+  margin-left: 20px;
 }
 
 .content {
@@ -84,11 +180,24 @@ header .navbar ul li:last-child a {
     padding: 0 !important;
   }
   header ul {
+    padding: 0 !important;
     background-color: #0c0c0c !important;
+  }
+  header ul li {
+    padding-right: 1rem;
+  }
+  header ul li:hover {
+    background-color: #242424;
   }
   header ul li:last-child {
     background-color: transparent !important;
-    padding: 0 !important;
+    margin-left: 0rem !important;
+  }
+  header ul li:last-child:hover {
+    background-color: #242424 !important;
+  }
+  header ul li:last-child a {
+    padding-right: 1rem;
   }
 }
 /*# sourceMappingURL=landing.css.map */
