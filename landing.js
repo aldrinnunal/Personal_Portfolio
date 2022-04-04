@@ -16,12 +16,10 @@ window.addEventListener('scroll',function(){
 
 // OWL PROGRAM CAROUSEL
 $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
+    loop:false,
+    margin: 80,
     nav:false,
-    
-    autoplay: true,
-  autoplayTimeout: 3000,
+
 
     responsive:{
         0:{

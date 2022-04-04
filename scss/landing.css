@@ -310,6 +310,10 @@ header .navbar ul li:last-child a:hover {
   line-height: 1.8;
 }
 
+.plans .box1 p i {
+  color: #063e66;
+}
+
 .plans .box1 h5 {
   padding: 0 1.5rem;
   margin: 0;
@@ -336,7 +340,7 @@ header .navbar ul li:last-child a:hover {
 }
 
 .testimony-section {
-  background-color: #020101;
+  background-color: #0c0c0c;
   width: 100%;
   margin: 5rem 0;
 }
@@ -353,6 +357,7 @@ header .navbar ul li:last-child a:hover {
 }
 
 .testimony-section .testimony__title {
+  width: 80%;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -366,7 +371,7 @@ header .navbar ul li:last-child a:hover {
 }
 
 .programs {
-  width: 90%;
+  width: 70%;
   height: 50%;
   margin: 8rem auto;
 }
@@ -378,6 +383,15 @@ header .navbar ul li:last-child a:hover {
 
 .programs__title h1 {
   font-weight: 700;
+}
+
+.programs .owl-carousel .item {
+  position: relative;
+}
+
+.programs .owl-carousel img {
+  max-height: 250px;
+  display: block;
 }
 
 .programs .owl-carousel span {
