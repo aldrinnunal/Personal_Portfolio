@@ -5,6 +5,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none !important;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -342,7 +343,7 @@ header .navbar ul li:last-child a:hover {
 .testimony-section {
   background-color: #0c0c0c;
   width: 100%;
-  margin: 5rem 0;
+  margin: 5rem 0 auto 0;
 }
 
 .testimony-section .testimony {
@@ -371,9 +372,9 @@ header .navbar ul li:last-child a:hover {
 }
 
 .programs {
-  width: 70%;
-  height: 50%;
-  margin: 8rem auto;
+  width: 90%;
+  height: 100%;
+  margin: 2rem auto;
 }
 
 .programs__title {
@@ -390,8 +391,9 @@ header .navbar ul li:last-child a:hover {
 }
 
 .programs .owl-carousel img {
-  max-height: 250px;
+  max-height: 100%;
   display: block;
+  border-radius: 20px;
 }
 
 .programs .owl-carousel span {
@@ -416,6 +418,26 @@ header .navbar ul li:last-child a:hover {
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   border-radius: 1px !important;
+}
+
+footer img {
+  width: 80px;
+}
+
+footer a {
+  color: white !important;
+}
+
+footer a:hover {
+  opacity: 70%;
+}
+
+footer h5 {
+  color: #1181d2 !important;
+}
+
+footer p {
+  color: white !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -478,6 +500,7 @@ header .navbar ul li:last-child a:hover {
   .plans {
     width: 80%;
     margin: auto;
+    padding-top: 2rem !important;
   }
   .plans__title {
     padding-bottom: 2.5rem;

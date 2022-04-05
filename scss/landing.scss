@@ -10,6 +10,7 @@ $blue:#063e66;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none !important;
     transition: all 0.3s ease-in-out;
 
 }
@@ -390,7 +391,7 @@ header
 {
     background-color: rgb(12, 12, 12);
     width: 100%;
-    margin: 5rem 0;
+    margin: 5rem 0 auto 0;
     & .testimony
     {
         padding: 4rem 0px;
@@ -423,9 +424,9 @@ header
 // PROGRAMS
 .programs
 {
-    width: 70%;
-    height: 50%;
-    margin: 8rem auto;
+    width: 90%;
+    height: 100%;
+    margin: 2rem auto;
     &__title
     {
         
@@ -447,8 +448,9 @@ header
         }
         & img
         {
-            max-height: 250px;
+            max-height: 100%;
             display: block;
+            border-radius: 20px;
         }
     }
   
@@ -487,6 +489,31 @@ header
         border-radius:1px !important;
     }
   
+}
+
+// FOOTER
+footer
+{
+    & img   
+    {
+        width: 80px;
+    }
+    & a
+    {
+        color: white !important;
+        &:hover
+        {
+            opacity: 70%;
+        }
+    }
+    & h5
+    {
+        color: #1181d2 !important;
+    }
+    & p
+    {
+        color: white !important;
+    }
 }
 
 
@@ -591,11 +618,12 @@ header
     }
 }
    // PLANS
+
 .plans
 {
     width: 80%;
     margin: auto;
-
+    padding-top: 2rem !important;
     &__title
     {
         padding-bottom: 2.5rem;
