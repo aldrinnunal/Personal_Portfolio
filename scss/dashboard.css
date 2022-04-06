@@ -1,0 +1,67 @@
+.burger > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 48% !important;
+}
+
+.burger > span:nth-child(2) {
+  width: 20px !important;
+  top: 48% !important;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger > span:last-child {
+  width: 20px !important;
+  top: 48% !important;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container .topnav #toggle {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.121);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.121);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .topnav #toggle:hover {
+  background-color: rgba(169, 169, 169, 0.21);
+}
+
+.container .topnav #toggle .toggleBars {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.container .topnav #toggle .toggleBars span {
+  position: absolute !important;
+  background-color: #272727;
+  width: 100%;
+  height: 1px;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .topnav #toggle .toggleBars span:first-child {
+  top: 18%;
+  width: 20px;
+}
+
+.container .topnav #toggle .toggleBars span:nth-child(2) {
+  width: 15px;
+  top: 48%;
+}
+
+.container .topnav #toggle .toggleBars span:last-child {
+  width: 10px;
+  top: 78%;
+}
+/*# sourceMappingURL=dashboard.css.map */
