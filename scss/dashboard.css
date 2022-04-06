@@ -5,10 +5,8 @@
 }
 
 .burger > span:nth-child(2) {
-  width: 20px !important;
-  top: 48% !important;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  width: 0px !important;
+  opacity: 0;
 }
 
 .burger > span:last-child {
@@ -24,14 +22,12 @@
   display: inline-block;
   padding: 10px;
   border-radius: 100%;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.121);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.121);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .container .topnav #toggle:hover {
-  background-color: rgba(169, 169, 169, 0.21);
+  background-color: rgba(169, 169, 169, 0.077);
 }
 
 .container .topnav #toggle .toggleBars {
@@ -52,7 +48,6 @@
 
 .container .topnav #toggle .toggleBars span:first-child {
   top: 18%;
-  width: 20px;
 }
 
 .container .topnav #toggle .toggleBars span:nth-child(2) {
