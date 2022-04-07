@@ -1,13 +1,27 @@
 
-// BURGER TOGGLE
+//  DASBOARD TOGGLE
 $('.toggler').click(function(){
    
     $('.togglerWrapper').toggleClass('openToggle');
     $('.sidebar').toggleClass('sidebarHide');
     $('.main').toggleClass('mainWide');
-
 });
 
+// NIGHTMODE
+$('.darkmode__track').click(function(){
+    $('.darkmode__ball').toggleClass('nightmode');
+    $(this).toggleClass('darktrack');
+    $('body').toggleClass('darkbody');
+    $('.cards').toggleClass('darkcards');
+    $('.cards1').toggleClass('darkcards');
+    $('h3').toggleClass('darkh3');
+    $('.bar').toggleClass('darktoggle');
+    $('.fa-envelope').toggleClass('darkh3');
+    $('.fa-bell').toggleClass('darkh3');
+  
+   
+    
+});
 // CHART JS
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {

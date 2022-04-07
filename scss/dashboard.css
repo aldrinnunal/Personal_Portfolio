@@ -29,6 +29,36 @@
   margin-left: 0 !important;
 }
 
+.nightmode {
+  margin-left: 60%;
+  bottom: 0;
+  background-color: white !important;
+}
+
+.darktrack {
+  background-color: gray !important;
+}
+
+.darkbody {
+  background-color: #313131;
+}
+
+.darkcards {
+  background-color: #313131 !important;
+  color: white !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid white;
+}
+
+.darkh3 {
+  color: white !important;
+}
+
+.darktoggle {
+  background-color: white !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -42,6 +72,8 @@ body {
   background-color: aliceblue;
   height: 100%;
   width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sidebar {
@@ -231,6 +263,7 @@ body {
   width: 100%;
   font-family: "Poppins", sans-serif !important;
   padding: 0 10px;
+  font-weight: 600;
 }
 
 .main .header .top__profile {
@@ -242,10 +275,37 @@ body {
           align-items: center;
 }
 
+.main .header .top__profile .darkmode {
+  position: relative;
+}
+
+.main .header .top__profile .darkmode__track {
+  position: relative;
+  width: 50px;
+  background-color: white;
+  padding: 12px 5px;
+  border-radius: 10px;
+  margin-left: 2rem;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(37, 37, 37, 0.092);
+          box-shadow: 0px 0px 10px 3px rgba(37, 37, 37, 0.092);
+  cursor: pointer;
+}
+
+.main .header .top__profile .darkmode__ball {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 12px;
+  background-color: #333333;
+  border-radius: 100%;
+}
+
 .main .header .top__profile i {
   font-size: 20px;
   color: #313131;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .main .header .top__profile a img {
@@ -268,7 +328,7 @@ body {
   grid-gap: 2rem;
 }
 
-.grid__container .cards {
+.grid__container .cards1 {
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,35 +345,35 @@ body {
           box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.108);
 }
 
-.grid__container .cards .icon .fa-envelope-circle-check {
+.grid__container .cards1 .icon .fa-envelope-circle-check {
   background-color: royalblue;
 }
 
-.grid__container .cards .icon .fa-money-bill-transfer {
+.grid__container .cards1 .icon .fa-money-bill-transfer {
   background-color: rgba(159, 8, 8, 0.775);
 }
 
-.grid__container .cards .icon .fa-users-line {
+.grid__container .cards1 .icon .fa-users-line {
   background-color: rgba(0, 128, 0, 0.748);
 }
 
-.grid__container .cards i {
+.grid__container .cards1 i {
   font-size: 40px !important;
   color: white;
   padding: 15px;
   border-radius: 100%;
 }
 
-.grid__container .cards__content {
+.grid__container .cards1__content {
   text-align: center;
   color: #313131;
 }
 
-.grid__container .cards__content h3 {
+.grid__container .cards1__content h3 {
   font-size: 1.5rem;
 }
 
-.grid__container .cards__content p {
+.grid__container .cards1__content p {
   font-size: 1.3rem;
 }
 
@@ -330,7 +390,7 @@ body {
 }
 
 .graphs__container .cards {
-  overflow: scroll;
+  overflow-y: auto;
   border-radius: 25px;
   background-color: white;
   padding: 2rem;
@@ -351,9 +411,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .graphs__container .cards__clients img {
@@ -411,6 +471,10 @@ body {
   }
   .graphs__container .cards {
     width: 100%;
+  }
+  .graphs__container .cards__clients img {
+    width: 50px;
+    height: 40px;
   }
   .graphs__container #myChart {
     width: 90%;

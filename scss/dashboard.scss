@@ -9,6 +9,8 @@ $slim-box-shadow:rgba(37, 37, 37, 0.092);
 $fontpoppins:"Poppins",sans-serif;
 
 
+
+
 // MIXINS
 @mixin flexaround {
     display: flex;
@@ -49,6 +51,37 @@ $fontpoppins:"Poppins",sans-serif;
 {
     margin-left: 0 !important;
 }
+.nightmode
+{
+    margin-left: 60%;
+    bottom: 0;
+    background-color: white !important;
+}
+.darktrack
+{
+    background-color: gray !important;
+}
+.darkbody
+{
+    background-color: $dark-gray;
+}
+
+.darkcards
+{
+    background-color: $dark-gray !important;
+    color: white !important;
+    box-shadow: none;
+    border: 1px solid white;
+}
+.darkh3
+{
+    color: white !important;
+}
+.darktoggle
+{
+    background-color: white !important;
+}
+
 
 
 *
@@ -66,6 +99,7 @@ body
     background-color: aliceblue;
     height: 100%;
     width: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 // SIDEBAR
@@ -247,6 +281,7 @@ body
                 width: 100%;
                 font-family: $fontpoppins !important;
                 padding: 0 10px;
+                font-weight: 600;
                
             }
 
@@ -254,11 +289,36 @@ body
             {
                 display: flex;
                 align-items: center;
+                & .darkmode
+                {
+                    position: relative;   
+                    &__track   
+                    {
+                        position: relative;
+                        width: 50px;
+                        background-color: white;
+                        padding: 12px 5px;
+                        border-radius: 10px;
+                        margin-left: 2rem;
+                        box-shadow: 0px 0px 10px 3px $slim-box-shadow;
+                        cursor: pointer;
+                    }
+                    &__ball   
+                    {
+                        transition: all 0.2s ease-in-out;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        padding: 12px;
+                        background-color: rgb(51, 51, 51);
+                        border-radius: 100%
+                    }
+                }
                 & i 
                 {
                     font-size: 20px;
                     color: $dark-gray;
-                    margin: 0 1rem;
+                    margin: 0 0.5rem;
                 }
                 & a 
                 {
@@ -289,7 +349,7 @@ body
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
-        & .cards
+        & .cards1
         {
             border-radius: 25px;
             display: flex;
@@ -349,7 +409,7 @@ body
         
         & .cards
         {
-            overflow: scroll;
+            overflow-y: auto;
             border-radius: 25px;
             background-color: rgb(255, 255, 255);
             padding: 2rem;
@@ -366,7 +426,7 @@ body
                 overflow-y: auto;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 & img 
                 {
                     width: 50px;
@@ -466,6 +526,15 @@ body
             & .cards
             {
                 width: 100%;
+                
+                &__clients
+                {
+                    & img 
+                    {
+                        width: 50px;
+                        height: 40px;
+                    }
+                }
             }
             & #myChart
             {
