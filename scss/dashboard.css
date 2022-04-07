@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .openToggle > span:first-child {
+  width: 28px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -19,6 +20,15 @@
   width: 26px !important;
 }
 
+.sidebarHide {
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
+}
+
+.mainWide {
+  margin-left: 0 !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -35,6 +45,7 @@ body {
 }
 
 .sidebar {
+  overflow-y: auto;
   background-color: white;
   position: fixed;
   top: 0;
@@ -43,10 +54,12 @@ body {
   width: 280px;
   -webkit-box-shadow: 0px 0px 2px 3px rgba(37, 37, 37, 0.092);
           box-shadow: 0px 0px 2px 3px rgba(37, 37, 37, 0.092);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .sidebar__logo {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .sidebar__logo:hover {
@@ -70,9 +83,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1rem;
+  height: auto;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: #313131;
+  overflow-y: auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
@@ -86,7 +101,7 @@ body {
 }
 
 .sidebar__links:last-child {
-  margin-top: 25rem;
+  margin-top: 10rem;
 }
 
 .sidebar__links .icons {
@@ -120,9 +135,13 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: -50;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .main .header .top {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,6 +154,7 @@ body {
 }
 
 .main .header .top__toggle {
+  z-index: 1000 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,10 +191,6 @@ body {
 
 .main .header .top__toggle .toggler .togglerWrapper span:not(:first-child) {
   margin-top: 5px;
-}
-
-.main .header .top__toggle .toggler .togglerWrapper span:first-child {
-  width: 28px;
 }
 
 .main .header .top__toggle .toggler .togglerWrapper span:nth-child(2) {
@@ -299,5 +315,183 @@ body {
 
 .grid__container .cards__content p {
   font-size: 1.3rem;
+}
+
+.graphs {
+  margin-top: 3rem;
+}
+
+.graphs__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.graphs__container .cards {
+  overflow: scroll;
+  border-radius: 25px;
+  background-color: white;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.108);
+          box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.108);
+}
+
+.graphs__container .cards h3 {
+  color: #313131;
+}
+
+.graphs__container .cards__clients {
+  height: auto;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.graphs__container .cards__clients img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.graphs__container .cards__clients .contents {
+  padding: 2rem;
+}
+
+.graphs__container .cards__clients .contents p {
+  color: rgba(128, 128, 128, 0.803);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid__container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid__container .cards {
+    padding: 4rem 2rem;
+  }
+  .grid__container .cards i {
+    font-size: 1rem !important;
+  }
+  .grid__container .cards__content h3 {
+    font-size: 1rem;
+  }
+  .grid__container .cards__content p {
+    font-size: 0.8rem;
+  }
+  .graphs__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .graphs__container .cards {
+    width: 100% !important;
+  }
+  .graphs__container #myChart {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid__container {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .graphs__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .graphs__container .cards {
+    width: 100%;
+  }
+  .graphs__container #myChart {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sidebar {
+    z-index: 1000;
+  }
+  .main {
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 10px;
+  }
+  .main .header .top__toggle {
+    z-index: -200;
+  }
+  .main .header .top__toggle h3 {
+    z-index: 1000;
+  }
+  .main .header .top .input-box {
+    display: none;
+  }
+  .top__profile img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .graphs__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .graphs__container .cards {
+    width: 100%;
+  }
+  .graphs__container #myChart {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .grid__container .cards {
+    padding: 3rem 1rem !important;
+  }
+  .grid__container .cards__content h3 {
+    font-size: 1.2rem;
+  }
+  .grid__container .cards__content p {
+    font-size: 1rem;
+  }
+  .graphs__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .graphs__container .cards {
+    width: 100%;
+  }
+  .graphs__container #myChart {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .grid__container .cards {
+    padding: 3rem 1rem !important;
+  }
+  .grid__container .cards__content h3 {
+    font-size: 1.2rem;
+  }
+  .grid__container .cards__content p {
+    font-size: 1rem;
+  }
+  .graphs__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .graphs__container .cards {
+    width: 100%;
+  }
+  .graphs__container #myChart {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=dashboard.css.map */

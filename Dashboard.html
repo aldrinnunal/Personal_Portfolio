@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASHBOARD</title>
+ 
+
     <!-- MY CSS -->
     <link rel="stylesheet" href="scss/dashboard.css">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
+    <!-- CHART JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <!-- MAIN CONTAINER -->
+
+    <!-- SIDEBAR -->
     <section class="sidebar">
         <div class="sidebar__logo">
             <a href=""><img src="img/HOMES.png" alt="Homes"></a>
@@ -57,6 +62,8 @@
         </a>
     </section>
 
+    <!-- MAIN CONTENT -->
+
     <section class="main">
         <header class="header">
             <div class="top">
@@ -71,7 +78,7 @@
                         </div>
                     </a>
                     
-                        <h3>Dashboard</h3>
+                        <h3>HOME</h3>
                 </div>
 
                 <!-- SEARCH -->
@@ -86,11 +93,12 @@
                 <div class="top__profile">
                     <i class="fa-solid fa-envelope"></i>
                     <i class="fa-solid fa-bell" style="margin-right:1rem;"></i>
-                    <a href=""><img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></a>
+                    <a href="#!"><img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></a>
                 </div>
             </div>
         </header>
 
+        <!-- GRIDS -->
         <section class="grid">
             <div class="grid__container">
                 <div class="cards">
@@ -124,6 +132,51 @@
                     </div>
     
                 </div>
+            </div>
+        </section>
+        <!-- GRAPHS -->
+        <section class="graphs">
+            <div class="graphs__container">
+                <div class="cards">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="cards">
+                    <h3>Client Messages</h3>
+                    <br>
+
+                    <div class="cards__clients">
+                        <img src="https://images.pexels.com/photos/5704720/pexels-photo-5704720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <div class="contents">
+                            <h4>Mary</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil atque labore </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="cards__clients">
+                        <img src="https://images.pexels.com/photos/5704720/pexels-photo-5704720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <div class="contents">
+                            <h4>Mary</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil atque labore </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="cards__clients">
+                        <img src="https://images.pexels.com/photos/5704720/pexels-photo-5704720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <div class="contents">
+                            <h4>Mary</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil atque labore </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="cards__clients">
+                        <img src="https://images.pexels.com/photos/5704720/pexels-photo-5704720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <div class="contents">
+                            <h4>Mary</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil atque labore </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </section>
