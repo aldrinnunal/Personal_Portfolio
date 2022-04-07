@@ -4,38 +4,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <!-- MYCSS -->
+    <title>DASHBOARD</title>
+    <!-- MY CSS -->
     <link rel="stylesheet" href="scss/dashboard.css">
-
-    <!-- MATERIAL ICONS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <aside class="topnav">
-            <div class="topnav_logo">
-
+    <!-- MAIN CONTAINER -->
+    <section class="sidebar">
+        <div class="sidebar__logo">
+            <a href=""><img src="img/HOMES.png" alt="Homes"></a>
+        </div>
+        <a href="#!"class="sidebar__links">
+            <div class="icons">
+                <i class="fa-solid fa-home"></i>
             </div>
-            <div id="toggle">
-                <div class="toggleBars">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <span>Home</span>
+        </a>
+        <a href="#!"class="sidebar__links">
+            <div class="icons">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <span>Customers</span>
+        </a>
+        <a href="#!"class="sidebar__links">
+            <div class="icons">
+                <i class="fa-solid fa-receipt"></i>
+            </div>
+            <span>Transactions</span>
+        </a>
+        <a href="#!"class="sidebar__links">
+            <div class="icons">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <span>Message</span>
+        </a>
+        <a href="#!"class="sidebar__links">
+            <div class="icons">
+        <i class="fa-solid fa-cog"></i>
+            </div>
+            <span>Settings</span>
+        </a>
+        
+
+
+        <a href="#!"class="sidebar__links">
+            <div class="icons">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <span>Sign Out</span>
+        </a>
+    </section>
+
+    <section class="main">
+        <header class="header">
+            <div class="top">
+
+                <!-- TOGGLE -->
+                <div class="top__toggle">
+                    <a href = "#!"class="toggler">
+                        <div class="togglerWrapper">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    
+                        <h3>Dashboard</h3>
+                </div>
+
+                <!-- SEARCH -->
+                <div class="input-box">
+                    <input placeholder="Search">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+                <!-- ICONS AND PROFILE -->
+                <div class="top__profile">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-bell" style="margin-right:1rem;"></i>
+                    <a href=""><img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></a>
                 </div>
             </div>
-            
-        </aside>
+        </header>
 
-    </div>
-
+        <section class="grid">
+            <div class="grid__container">
+                <div class="cards">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope-circle-check"></i>
+                    </div>
+                    <div class="cards__content">
+                        <h3>7,000 Emails</h3>
+                        <p>Lorem Ipsum</p>
+                     
+                    </div>
     
-     <!-- CDN JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+                </div>
+                <div class="cards">
+                    <div class="icon">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                    </div>
+                    <div class="cards__content">
+                        <h3>7,000 Transactions</h3>
+                        <p>Lorem Ipsum</p>
+                    </div>
+    
+                </div>
+                <div class="cards">
+                    <div class="icon">
+                        <i class="fa-solid fa-users-line"></i>
+                    </div>
+                    <div class="cards__content">
+                        <h3>7,000 Customers</h3>
+                        <p>Lorem Ipsum</p>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- CDN JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- MY JS -->
     <script src="dashboard.js"></script>
-    
-
 </body>
 </html>

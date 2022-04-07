@@ -1,6 +1,5 @@
 
-
 // BURGER TOGGLE
-$('#toggle').click(function(){
-    $('.toggleBars').toggleClass('burger');
+$('.toggler').click(function(){
+    $('.togglerWrapper').toggleClass('openToggle');
 });

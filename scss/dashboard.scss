@@ -1,88 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$dark-gray: rgb(81, 81, 81);
-// TOGGLING HELPER
-.burger  
-{
-    > span:first-child
-    {
-    transform: rotate(45deg);
 
-    top: 48% !important;
-    }
-    > span:nth-child(2)
-    {
-    width: 0px !important;
-     opacity: 0;
-  
-    }
-    > span:last-child
-    {
-     width: 20px !important;
-     top: 48% !important;
-     transform: rotate(-45deg);
-    }
- 
+
+// COLORS & FONTS
+$dark-gray: rgb(49, 49, 49);
+$big-box-shadow:rgba(37, 37, 37, 0.108);
+$slim-box-shadow:rgba(37, 37, 37, 0.092);
+$fontpoppins:"Poppins",sans-serif;
+
+
+// MIXINS
+@mixin flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
-// TOP-NAV
-.container
+// TOGGLE LAPTOP ETC.. HELPER CLASSES
+.openToggle
 {
-    & .topnav
-    
+    >span:first-child
     {
-      
-        & #toggle
+        transform:rotate(45deg);
+    }
+    >span:nth-child(2)
+    {
+       transform: translateX(-10px);
+       opacity: 0;
+       margin-top: 0 !important;
+       display: none ;
+    }
+    >span:last-child
+    {
+        margin-top: 0 !important;
+        transform:rotate(-45deg);
+        width: 26px !important;
+    }
+}
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body
+{
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+}
+
+// SIDEBAR
+.sidebar
+{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    box-shadow: 0px 0px 2px 3px $slim-box-shadow;
+   
+    &__logo
+    {
+        margin-top: 4rem;
+        
+        &:hover
         {
-            position: relative;
-            cursor: pointer;
-            display: inline-block;
-            padding: 10px;
-            border-radius: 100%;
-          
-            transition: all 0.3s ease-in-out;
+            transform: scale(1.02);
+        }
+        & img
+        {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 110px;
+            
+        }
+    }
+    &__links
+
+    {       
+            padding: 0.5rem 3rem;
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            font-family: $fontpoppins;
+            font-size: 18px;
+            color: $dark-gray;
+            transition: all 0.1s ease-in-out;
+            // background-color: red;
+        &:hover
+        {
+            background-color: rgba(180, 218, 252, 0.393);
+        }
+        &:nth-child(2)
+        {
+            border-left: 10px solid rgb(12, 113, 200);
+        }
+        &:last-child
+        {   
+        
+            margin-top: 25rem;
+         
+        }
+        & .icons
+        {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & span 
+        {
+            transition: all 0.1s ease-in-out;
             &:hover
             {
-               
-              background-color: rgba(169, 169, 169, 0.077);
-           
+                transform: translateX(4px);
             }
-            & .toggleBars
-            {
-               position: relative;
-               width: 20px;
-               height: 20px;
-            
+        }
 
-             
-                & span
+    }
+}
+
+// MAIN
+
+.main
+{
+    margin-left:280px;
+    overflow-y: auto;
+    padding: 2rem;
+    font-family: $fontpoppins;
+    box-sizing: border-box;
+
+
+    & .header
+    {
+        & .top
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &__toggle
+            {
+                display: flex;
+                align-items: center;
+
+                & .toggler
                 {
-                    position: absolute !important;
-                    background-color: rgb(39, 39, 39);
-                    width: 100%;
-                    height: 1px;
-                    border-radius: 20px;
-                    transition: all 0.3s ease-in-out;
-                 
-                
+                    display: flex;
+                    align-items: center;
+
+                    & .togglerWrapper
+                    {
+                       
+                        border-radius: 100%;
+                        margin-right: 0.8rem;
+                        & span
+                        {
+                          background-color: $dark-gray;
+                          display: block;
+                          border-radius: 10px;
+                          width: 28px;
+                          height: 4px;
+                          transition: all 0.3s ease-in-out;
+                          transform-origin: 8px 2px;
+                          &:not(:first-child)
+                          {
+                            margin-top: 5px;
+                          }
+                          &:first-child
+                          {
+                              width: 28px;
+                          }
+                          &:nth-child(2)
+                          {
+                              width: 20px;
+                          }
+                          &:last-child
+                          {
+                              width: 15px;
+                          }
+                        }
+
+                        
+                    }
                 }
-                & span:first-child
+              & h3
+              {
+                margin-right: 1rem;
+                color: $dark-gray;
+              }
+            } 
+
+
+            & .input-box 
+            {
+            
+               width: 500px;
+               display: flex;
+               justify-content: space-between;
+               padding: 12px;
+               box-shadow: 0px 0px 10px $big-box-shadow;
+               background-color: white;
+               border-radius: 20px;
+               & i 
+               {
+                   color: rgb(49, 49, 49) !important;
+               }
+            }
+            & .input-box input 
+            {
+                border: none !important;
+                outline: none !important;
+                width: 100%;
+                font-family: $fontpoppins !important;
+                padding: 0 10px;
+               
+            }
+
+            &__profile
+            {
+                display: flex;
+                align-items: center;
+                & i 
                 {
-                    top: 18%;
-                   
+                    font-size: 20px;
+                    color: $dark-gray;
+                    margin: 0 1rem;
                 }
-                & span:nth-child(2)
+                & a 
                 {
-                    width: 15px ;
-                    top: 48%;
-                }
-                & span:last-child
-                {
-                    width: 10px ;
-                    top: 78%;
+                    & img 
+                    {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        box-shadow: 0px 0px 2px 3px $slim-box-shadow;
+                    }
                 }
             }
         }
-    
+       
+      
+      
+      
+    }
+}
+
+// GRID
+.grid
+{
+    margin-top: 5rem;
+
+    &__container
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        & .cards
+        {
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 4rem 5rem ;
+            box-shadow: 0px 0px 10px $big-box-shadow;
+            & .icon .fa-envelope-circle-check
+            {
+                background-color: royalblue;
+     
+            }
+            & .icon .fa-money-bill-transfer
+            {
+                background-color: rgba(159, 8, 8, 0.775);
+            }
+            & .icon .fa-users-line
+            {
+                background-color: rgba(0, 128, 0, 0.748);
+            }
+            & i 
+            {
+                font-size: 40px !important;
+                color: white;
+                padding: 15px;
+                border-radius: 100%;
+            }
+            &__content
+            {
+                text-align: center;
+                color: $dark-gray;
+                & h3
+                {
+                   
+                    font-size: 1.5rem;
+                }
+                & p 
+                {
+                    font-size: 1.3rem;
+                }
+            }
+        }
     }
 }
